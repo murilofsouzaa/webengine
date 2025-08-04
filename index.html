@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webengine</title>
+    <title>Webengine | Compra, venda e troque carros usados, novos ou seminovos</title>
+    <link rel="stylesheet" href="src/css/main-page.css">
 </head>
 <body>
 
     <header>
         <nav>
             <div id="logo">
-                <h1>Webengine</h1>
-                <img src="src/images/icons/car.png" alt="">
+                <h1>WebEngine</h1>
             </div>
             <ul>
-                <li>Comprar</li>
-                <li>Vender</li>
-                <li>Serviços</li>
-                <li>Ajuda</li>
+                <li><a href="#">Comprar</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Ajuda</a></li>
             </ul>
-            <div>
+            <div class="login-div">
                 <img src="src/images/icons/user.png" alt="">
-                <p>Entrar</p>
+                <p><a href="#">Entrar</a></p>
             </div>
         </nav>
     </header>
@@ -32,9 +32,11 @@
         </div>
 
         <section class="search-input-container">
-            <input type="text" name="Search" id="search-container" placeholder="Digite um modelo ou marca do veículo">
-
-            <button>Buscar</button>
+            <div>
+                <img src="src/images/icons/search-interface-symbol.png" alt="">
+                <input type="text" name="Search" id="search" placeholder="Digite um modelo ou marca do veículo">
+            </div>
+            <button>VER OFERTAS</button>
         </section>
 
         <section class="vehicles-container">

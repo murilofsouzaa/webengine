@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: A4SPEED;
+    src: url(../fonts/a4_speed/A4SPEED-Bold.ttf);
+
+    font-weight: normal;
+}
+
+body{
+    font-family: Poppins;
+}
+
+header{
+    padding: 10px 40px 10px 40px;
+    box-shadow: 0px 0px 2px 2px #00000050;
+    margin: 0px 0px 40px 0px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo h1{
+    font-family: A4SPEED;
+    color: #222020;
+}
+
+nav ul{
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li{
+    position: relative; 
+    padding: 6px;
+    list-style: none;
+}
+
+nav ul li a{
+    font-size: 14px;
+    color: #000000c7;
+    text-decoration: none;
+}
+
+nav ul li::after{
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    background-color: #DF2945;
+    width: 0%;
+    height: 2px;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+}
+
+#logo{
+    display: flex;
+    gap: 8px;
+}
+
+#logo img{
+    width: 32px;
+    height: 32px;
+}
+
+.login-div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-div a{
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.login-div a:hover{
+    text-decoration: dashed;
+}
+
+.login-div img{
+    width: 20px;
+    height: 20px;
+}
+
+.search-input-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.search-input-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #00000042;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.search-input-container img{
+    width: 20px;
+    opacity: 0.8;
+}
+
+.search-icon-container{
+    display: flex;
+    padding: 10px;
+}
+
+.search-input-container #search{
+    padding: 10px;
+    width: 320px;
+    border: none;
+    line-height: 21px;
+}
+
+.search-input-container #search::placeholder{
+    font-weight: bolder;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.466);
+}
+
+.search-input-container #search:focus{
+    outline: none;
+}
+
+.search-input-container button{
+    width: 260px;
+    border: none;
+    background-color: #DF2945;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 7px;
+    transition: 0.5s ease;
+}
+
+.search-input-container button:hover{
+    background-color: #c2263d;
+    transform: scale(0.99);
+    cursor: pointer;
+}
+
+button, input{
+    font-family: inherit;
+}
+
+main{
+
+}
