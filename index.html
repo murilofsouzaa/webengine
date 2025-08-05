@@ -14,10 +14,37 @@
                 <h1>WebEngine</h1>
             </div>
             <ul>
-                <li><a href="#">Comprar</a></li>
-                <li><a href="#">Vender</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Ajuda</a></li>
+                <li>
+                    <a href="#">Comprar</a>
+                    <ul class="dropdown">
+                        <li><a href="#"><img src="./src/images/icons/electric-car.png" alt="new-car-icon" class="vehicle-icons">Carros novos</a></li>
+                        <li><a href="#"><img src="./src/images/icons/auto.png" alt="used-car-icon" class="vehicle-icons"> Carros usados</a></li>
+                        <li><a href="#"><img src="./src/images/icons/motorcycle_10590636.png" alt="motocycle-new-icon" class="vehicle-icons">Motos novas</a></li>
+                        <li><a href="#"><img src="./src/images/icons/motocycle.png" alt="motocycle-used-icon" class="vehicle-icons">Motos usadas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Vender</a>
+                    <ul class="dropdown">
+                        <li><a href="#"><img src="./src/images/icons/electric-car.png" alt="new-car-icon" class="vehicle-icons">Vender carro</a></li>
+                        <li><a href="#"><img src="./src/images/icons/motorcycle_10590636.png" alt="new-motocycle-icon" class="vehicle-icons">Vender moto</a></li>
+                        <li><a href="#"><img src="./src/images/icons/administrator_7850479.png" alt="manager-icon" class="vehicle-icons">Gerenciar meu anúncio</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Serviços</a>
+                    <ul class="dropdown">
+                        <li><a href="#"><img src="./src/images/icons/dollar_940932.png" alt="consortium-icon" class="vehicle-icons">Consórcio</a></li>
+                        <li><a href="#"><img src="./src/images/icons/money_18863945.png" alt="financing-icon" class="vehicle-icons">Financiamento</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Ajuda</a>
+                    <ul class="dropdown">
+                        <li><a href="#"><img src="./src/images/icons/user 2.png" alt="user-2-icon" class="vehicle-icons">Para você</a></li>
+                        <li><a href="#"><img src="./src/images/icons/group_727373.png" alt="company-icon" class="vehicle-icons">Para sua empresa</a></li>
+                    </ul>
+                </li>
             </ul>
             <div class="login-div">
                 <img src="src/images/icons/user.png" alt="">
@@ -40,12 +67,21 @@
         </section>
 
         <section class="vehicles-container">
+            <article class="sponsored">
 
+            </article>
+            <article class="categories">
+
+            </article>
+            <article class="popular-brands">
+
+            </article>
         </section>
     </main>
 
     <footer>
         <section class="shortcuts">
+            <h2>Atalhos</h2>
             <ul>
                 <li>Comprar</li>
                 <li>Vender</li>
@@ -55,10 +91,12 @@
         </section>
 
         <section class="schedule">
+            <h2>Horários</h2>
             <p>Segunda a Sexta: 9h às 19h</p>
         </section>
 
         <section class="contact">
+            <h2>Contato</h2>
             <p>(33) 999026628</p>
         </section>
 
@@ -72,3 +110,5 @@
     </footer>
 </body>
 </html>
+
+<script src="src/js/vehicle-view.js"></script>
