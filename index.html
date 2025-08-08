@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webengine | Compra, venda e troque carros usados, novos ou seminovos</title>
     <link rel="stylesheet" href="src/css/main-page.css">
+    <link rel="shortcut icon" href="./src/images/icons/letter-w.png" type="image/x-icon">
 </head>
 <body>
 
     <header>
         <nav>
-            <div id="logo">
-                <h1>WebEngine</h1>
+            <div id="logo-container">
+                <img src="./src/images/icons/letter-w.png" alt="">
+                <a href="./index.html" class="logo">
+                    <h1>WebEngine</h1>
+                </a>
             </div>
             <ul>
                 <li>
@@ -29,6 +33,12 @@
                         <li><a href="#"><img src="./src/images/icons/electric-car.png" alt="new-car-icon" class="vehicle-icons">Vender carro</a></li>
                         <li><a href="#"><img src="./src/images/icons/motorcycle_10590636.png" alt="new-motocycle-icon" class="vehicle-icons">Vender moto</a></li>
                         <li><a href="#"><img src="./src/images/icons/administrator_7850479.png" alt="manager-icon" class="vehicle-icons">Gerenciar meu anúncio</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Notícias</a>
+                    <ul class="dropdown">
+                        <li><a href="#"><img src="./src/images/icons/video.png" alt="videos-icon" class="vehicle-icons">Vídeos</a></li>
                     </ul>
                 </li>
                 <li>
@@ -67,8 +77,8 @@
         </section>
 
         <section class="vehicles-container">
-            <article class="sponsored">
-
+            <article class="sponsored">  
+        
             </article>
             <article class="categories">
 
@@ -111,4 +121,3 @@
 </body>
 </html>
 
-<script src="src/js/vehicle-view.js"></script>
