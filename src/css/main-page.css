@@ -228,6 +228,83 @@ button, input{
     font-family: inherit;
 }
 
-main{
+.vehicles-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin-top: 80px;
+}
 
+.vehicles-container h2{
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    color: #1a1a1aef;
+}
+
+.vehicles-container > .sponsored > .card-car > ul ,
+.vehicles-container > .categories > .card-car > ul,
+.vehicles-container > .popular-brands > .card-car > ul{
+    list-style: none;
+}
+
+.card-car{
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.card-car img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-car:hover{
+    filter: brightness(70%);
+    cursor: pointer;
+}
+
+.card-car:hover::after{
+    content: "";
+    position: absolute;
+    background-color: #DF2945;
+    width: 100%;
+    height: 4px;
+    top: 95%;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #161515;
+    color: #e4e4e4;
+    padding: 160px;
+}
+
+.social-media ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.shortcuts ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.shortcuts ul li a{
+    text-decoration: none;
+    color: #e4e4e4;
+}
+
+.shortcuts ul li, .schedule p, .contact p, .social-media ul{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+footer .social-media img{
+    width: 30px;
+    filter: invert();
 }

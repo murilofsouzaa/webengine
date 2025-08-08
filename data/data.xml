@@ -277,3 +277,76 @@
 		</models>
 	</brand>
 </brands>
+
+<brand>
+  <name>Ford</name>
+  <id>33</id>
+  <models>
+    <model>
+      <name>Focus ST</name>
+      <id>500</id>
+      <generations>
+        <generation>
+          <name>Focus ST (2022)</name>
+          <modelYear>2022</modelYear>
+          <id>6000</id>
+          <images>
+            <image>
+              <small>https://www.netcarshow.com/ford/2022-focus_st_edition/</small>
+              <big>https://www.netcarshow.com/ford/2022-focus_st_edition/</big>
+            </image>
+          </images>
+        </generation>
+      </generations>
+    </model>
+  </models>
+</brand>
+
+<brand>
+  <name>Rivian</name>
+  <id>44</id>
+  <models>
+    <model>
+      <name>R3X</name>
+      <id>700</id>
+      <generations>
+        <generation>
+          <name>R3X (2027)</name>
+          <modelYear>2027</modelYear>
+          <id>8000</id>
+          <images>
+            <image>
+              <small>https://www.netcarshow.com/rivian/2027-r3x/</small>
+              <big>https://www.netcarshow.com/rivian/2027-r3x/</big>
+            </image>
+          </images>
+        </generation>
+      </generations>
+    </model>
+  </models>
+</brand>
+
+<brand>
+  <name>Beijing</name>
+  <id>55</id>
+  <models>
+    <model>
+      <name>BJ40P</name>
+      <id>900</id>
+      <generations>
+        <generation>
+          <name>BJ40P (2024)</name>
+          <modelYear>2024</modelYear>
+          <id>10000</id>
+          <images>
+            <image>
+              <small>https://www.netcarshow.com/baic/2024-beijing_bj40p/</small>
+              <big>https://www.netcarshow.com/baic/2024-beijing_bj40p/</big>
+            </image>
+          </images>
+        </generation>
+      </generations>
+    </model>
+  </models>
+</brand>
+

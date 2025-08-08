@@ -78,13 +78,22 @@
 
         <section class="vehicles-container">
             <article class="sponsored">  
-        
+                <h2>Patrocinados</h2>
+                <div class="card-car">
+                    <ul></ul>
+                </div>
             </article>
             <article class="categories">
-
+                <h2>Categorias</h2>
+                <div class="card-car">
+                    <ul></ul>
+                </div>
             </article>
             <article class="popular-brands">
-
+                <h2>Populares</h2>
+                <div class="card-car">
+                    <ul></ul>
+                </div>
             </article>
         </section>
     </main>
@@ -93,10 +102,10 @@
         <section class="shortcuts">
             <h2>Atalhos</h2>
             <ul>
-                <li>Comprar</li>
-                <li>Vender</li>
-                <li>Ajuda</li>
-                <li>Contato</li>
+                <li><a href="">Comprar</a></li>
+                <li><a href="">Vender</a></li>
+                <li><a href="">Ajuda</a></li>
+                <li><a href="">Contato</a></li>
             </ul>
         </section>
 
@@ -111,13 +120,48 @@
         </section>
 
         <section class="social-media">
+            <h2>Redes Sociais</h2>
             <ul>
-                <li><a href="#"></a><img src="src/images/icons/linkedin.svg" alt="linkedin-icon"></li>
-                <li><a href="#"></a><img src="src/images/icons/github.svg" alt="github-icon"></li>
-                <li><a href="#"></a><img src="src/images/icons/instagram.svg" alt="instagram-icon"></li>
+                <li><a href="https://www.linkedin.com/in/murilo-freitas-de-souza-67a01b2bb/" target="_blank"><img src="src/images/icons/linkedin.svg" alt="linkedin-icon"></a></li>
+                <li><a href="https://github.com/murilofsouzaa" target="_blank"><img src="src/images/icons/github.svg" alt="github-icon"></a></li>
+                <li><a href="https://www.instagram.com/murilofsouza_/" target="_blank"><img src="src/images/icons/instagram.svg" alt="instagram-icon"></a></li>
             </ul>
         </section>
     </footer>
 </body>
 </html>
 
+<script>
+    async function fetchData() {
+        const res = await fetch(`http://localhost:3000/carros`);
+        const data = await res.json();
+        return data;
+    }
+
+    async function setupSponsorCars() {
+        const data = await fetchData();
+
+        const cardContainers = document.querySelectorAll('.card-car > ul');
+
+        const selectedCars = data;
+
+        selectedCars.forEach((carBrand, index) => {
+            const model = carBrand.models[0];
+            const generation = model.generations[0];
+            const imageUrl = generation.images[0].big;
+
+            const li = document.createElement('li');
+            const img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = `${carBrand.name} ${model.name}`;
+            img.classList.add('car-img');
+            img.style.width = '260px';
+
+            li.appendChild(img);
+
+            cardContainers[index].appendChild(li);
+        });
+    }
+
+    setupSponsorCars();
+</script>

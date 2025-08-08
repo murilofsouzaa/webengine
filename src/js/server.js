@@ -1,8 +1,11 @@
 const express = require('express');
-const { loadCarData } = require('./services/car_api_xml');
+const cors = require('cors');
+const { loadCarData } = require('./services/car_api_xml.js');
 
 const app = express();
 const port = 3000;
+
+app.use(cors());
 
 app.get('/carros', (req, res) => {
   loadCarData((err, data) => {
