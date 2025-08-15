@@ -43,17 +43,14 @@ function updateArrowVisibility() {
         const rightBtn = arrowBtnsRight[containerIndex];
         
         if (leftBtn && rightBtn) {
-            // Esconder botão esquerdo se estiver no início
             if (currentIndex === 0) {
                 leftBtn.classList.add('arrow-hidden');
             } else {
                 leftBtn.classList.remove('arrow-hidden');
             }
             
-            // Esconder botão direito se estiver no final
-            // Calculando se chegou ao fim baseado no número de carros por container
             const carsPerContainer = Math.ceil(cars.length / carCards.length);
-            const maxIndex = cars.length - 3; // Mostra 3 carros por vez
+            const maxIndex = cars.length - 3;
             
             if (currentIndex >= maxIndex) {
                 rightBtn.classList.add('arrow-hidden');
@@ -70,7 +67,6 @@ function slideToNext(containerIndex) {
     
     if (!ul) return;
 
-    // Verificar se não está no final
     const maxIndex = cars.length - 3;
     if (currentIndexes[containerIndex] >= maxIndex) return;
 
@@ -108,7 +104,6 @@ function slideToPrev(containerIndex) {
     
     if (!ul) return;
 
-    // Verificar se não está no início
     if (currentIndexes[containerIndex] <= 0) return;
 
     ul.style.opacity = '0.3';
