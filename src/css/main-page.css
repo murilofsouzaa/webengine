@@ -13,7 +13,7 @@
 @font-face {
     font-family: A4SPEED;
     src: url(../fonts/a4_speed/A4SPEED-Bold.ttf);
-
+    
     font-weight: normal;
 }
 
@@ -24,6 +24,14 @@ body{
 header{
     box-shadow: 0px 0px 2px 2px #00000050;
     margin: 0px 0px 40px 0px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 220px;
 }
 
 nav{
@@ -229,10 +237,8 @@ button, input{
 }
 
 .vehicles-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60%;
+    overflow: hidden;
+    width: 50%;
     margin-top: 80px;
 }
 
@@ -251,26 +257,87 @@ button, input{
 
 .card-car{
     position: relative;
+    transition: 0.4 ease;
+}
+
+.card-car > ul{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card-car > ul li {
+    flex: 0 0 260px;
+}
+
+.card-car > ul li img{
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 3px solid transparent;
     transition: 0.3s ease;
 }
 
-.card-car img{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.card-car:hover{
-    filter: brightness(70%);
+.card-car > ul li img:hover{
+    filter: brightness(80%);
     cursor: pointer;
+    border-bottom: 3px solid #a51a2f;
 }
 
-.card-car:hover::after{
-    content: "";
+.card-car > .arrow-icon-left{
     position: absolute;
-    background-color: #DF2945;
-    width: 100%;
-    height: 4px;
-    top: 95%;
+    left: 10px;
+    top: 45%;
+    transform: translateY(-50%) scaleX(-1);
+    background-color: #111111ab;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.card-car > .arrow-icon-right{
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: #111111ab;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.card-car > .arrow-icon-left:hover,
+.card-car > .arrow-icon-right:hover{
+    background-color: #472127cc;
+}
+
+.card-car > .arrow-icon-right:hover{
+    transform: translateY(-50%) scale(1.1) skew(-10deg);
+}
+
+.card-car > .arrow-icon-left:hover{
+    transform: translateY(-50%) scaleX(-1) scale(1.1) skew(-10deg);
+}
+
+.arrow-hidden {
+    display: none !important;
 }
 
 footer{
